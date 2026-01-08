@@ -1,3 +1,29 @@
+# Personal Finance Risk Dashboard
+
+A Next.js app that showcases risk profiles for Savings, Bonds, Index Funds, and Crypto, with Tailwind and shadcn-style UI components.
+
+## Getting Started
+
+1) Install dependencies:
+
+```bash
+npm install
+```
+
+2) Run the development server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+## Tech
+
+- Next.js App Router
+- Tailwind CSS (with shadcn-inspired component styles)
+- Radix Slider
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

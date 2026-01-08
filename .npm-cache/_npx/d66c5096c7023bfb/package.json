@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "shadcn": "^3.6.3"
+  },
+  "_npx": {
+    "packages": [
+      "shadcn@latest"
+    ]
+  }
+}
