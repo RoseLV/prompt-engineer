@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "../theme-toggle";
 
-const items = [
+const items: Array<{ href: string; label: string }> = [
   { href: "/", label: "Overview" },
   { href: "/savings", label: "Savings" },
   { href: "/bonds", label: "Bonds" },
@@ -24,7 +25,7 @@ export function Navbar() {
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as any}
                 className={cn(
                   "rounded-md px-3 py-2 hover:bg-muted transition-colors",
                   active && "bg-muted font-medium"
@@ -35,7 +36,10 @@ export function Navbar() {
             );
           })}
         </nav>
-        <div className="ml-auto text-sm text-muted-foreground">Risk Dashboard</div>
+        <div className="ml-auto flex items-center gap-4">
+          <div className="text-sm text-muted-foreground">Risk Dashboard</div>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
