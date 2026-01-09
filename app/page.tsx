@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
-  const products = [
+  const products: Array<{ href: string; name: string; risk: string; desc: string }> = [
     { href: "/savings", name: "Savings", risk: "Low", desc: "High liquidity, principal protection, but limited returns." },
     { href: "/bonds", name: "Bonds", risk: "Low-Medium", desc: "Fixed income with moderate risk and predictable returns." },
     { href: "/index-funds", name: "Index Funds", risk: "Medium", desc: "Broad market exposure with balanced risk/return." },
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {products.map((p) => (
-          <Link key={p.href} href={p.href}>
+          <Link key={p.href} href={p.href as any}>
             <Card className="hover:shadow-soft transition-shadow h-full">
               <CardHeader>
                 <div className="flex items-center justify-between">
